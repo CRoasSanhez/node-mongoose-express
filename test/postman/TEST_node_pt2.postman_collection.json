@@ -1,0 +1,531 @@
+{
+	"info": {
+		"_postman_id": "7fa24ccf-1ec1-4a21-81ff-688a57560e15",
+		"name": "TESTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "clicknbox",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "CreateUser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"user\":{\n\t\t\"name\": \"Cesar 3\",\n\t\t\"lastName\" : \"Rosas 3\",\n\t\t\"curp\": \"ABCD909090HMCSNS00\",\n\t\t\"rfc\": \"ABCD909090XXX\",\n\t\t\"adresses\": [\n\t\t\t \"Loma bonita 1, Mexico City, Mexico\",\n\t\t\t \"Loma bonita 2, Jalisco, Mexico\"\n\t\t\t],\n\t\t\"nationalities\": [\n\t\t\t \"Mexican\",\n\t\t\t \"Brazilian\"\n\t\t\t],\n\t\t\"genre\": \"male\",\n\t\t\"userName\": \"CRosas3\",\n\t\t\"password\": \"password123\",\n\t\t\"email\": \"cesar3@email.com\"\n\t}\n\t\n\t\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4300/api/v1/user",
+									"host": [
+										"localhost"
+									],
+									"port": "4300",
+									"path": [
+										"api",
+										"v1",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"user\":{\n\t\t\"name\": \"Cesar 2 UPdated\",\n\t\t\"lastName\" : \"Rosas 2 UPdated\",\n\t\t\"curp\": \"ABCD909090HMCSNS00\",\n\t\t\"rfc\": \"ABCD909090XXX\",\n\t\t\"adresses\": [\n\t\t\t \"Loma bonita 1, Mexico City, Mexico\",\n\t\t\t \"Loma bonita 2, Jalisco, Mexico\"\n\t\t\t],\n\t\t\"nationalities\": [\n\t\t\t \"Mexican\",\n\t\t\t \"Brazilian\"\n\t\t\t],\n\t\t\"genre\": \"male\",\n\t\t\"password\": \"password123\"\n\t}\n\t\n\t\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4300/api/v1/user/5d9a8a510d1a37629cd70fc8",
+									"host": [
+										"localhost"
+									],
+									"port": "4300",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"5d9a8a510d1a37629cd70fc8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetUserByID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4300/api/v1/user/5d9a8a510d1a37629cd70fc8",
+									"host": [
+										"localhost"
+									],
+									"port": "4300",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"5d9a8a510d1a37629cd70fc8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4300/api/v1/user/5d9a8a510d1a37629cd70fc8",
+									"host": [
+										"localhost"
+									],
+									"port": "4300",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"5d9a8a510d1a37629cd70fc8"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Projects",
+					"item": [
+						{
+							"name": "Create Project",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"project\":{\n\t\t\"name\" : \"Project 2\",\n\t    \"type\" : \"field2\",\n\t    \"tags\" : [\"field\",\"degree\"],\n\t    \"managers\" : [\"5d9a8a510d1a37629cd70fc8\",\"5d9a8dc819cbf8652bdfa23a\"],\n\t    \"participants\" : [\"5d9a8a510d1a37629cd70fc8\",\"5d9a8dc819cbf8652bdfa23a\"]\n\t}\n\t\n\t\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4300/api/v1/project",
+									"host": [
+										"localhost"
+									],
+									"port": "4300",
+									"path": [
+										"api",
+										"v1",
+										"project"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Project",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"project\":{\n\t\t\"tags\": [\n\t\t    \"field\",\n\t\t    \"degree updated\"\n\t\t],\n\t\t\"name\": \"Project 2\",\n\t\t\"type\": \"field2\",\n\t\t\"managers\": [\n\t\t   \"5d9a8a510d1a37629cd70fc8\"\n\t\t],\n\t\t\"participants\": [\n\t\t    \"5d9a8dc819cbf8652bdfa23a\"\n\t\t]\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4300/api/v1/project/5d9aae59cd75a377a650620e",
+									"host": [
+										"localhost"
+									],
+									"port": "4300",
+									"path": [
+										"api",
+										"v1",
+										"project",
+										"5d9aae59cd75a377a650620e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel Project",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4300/api/v1/project/5d9aae0981276a76d4430698",
+									"host": [
+										"localhost"
+									],
+									"port": "4300",
+									"path": [
+										"api",
+										"v1",
+										"project",
+										"5d9aae0981276a76d4430698"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetProject ByID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4300/api/v1/project/5d9aae59cd75a377a650620e",
+									"host": [
+										"localhost"
+									],
+									"port": "4300",
+									"path": [
+										"api",
+										"v1",
+										"project",
+										"5d9aae59cd75a377a650620e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Min Max of projects",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4300/api/v1/projects/ops/peaks",
+									"host": [
+										"localhost"
+									],
+									"port": "4300",
+									"path": [
+										"api",
+										"v1",
+										"projects",
+										"ops",
+										"peaks"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Tasks",
+					"item": [
+						{
+							"name": "Create Task",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"task\":{\n\t    \"name\"            : \"Task1\",\n\t    \"type\"            : \"normal\",\n\t    \"description\"     : \"Breve descripcion de la tarea 1\",\n\t    \"relatedTasks\"    : [],\n\t    \"manager\"         : \"5d9a8a510d1a37629cd70fc8\",\n\t    \"deliveries\"      : []\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4300/api/v1/task/5d9aae59cd75a377a650620e",
+									"host": [
+										"localhost"
+									],
+									"port": "4300",
+									"path": [
+										"api",
+										"v1",
+										"task",
+										"5d9aae59cd75a377a650620e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Task",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"task\":{\n        \"description\": \"Breve descripcion de la tarea 1 actualizada\",\n        \"relatedTasks\": [],\n        \"name\": \"Task1 updated\",\n        \"type\": \"normal\",\n        \"manager\": [\n            \"5d9a8a510d1a37629cd70fc8\"\n        ],\n        \"deliveries\": [],\n        \"status\": \"init\",\n        \"project\": [\n            \"5d9aae59cd75a377a650620e\"\n        ]\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4300/api/v1/task/5d9ac53e3970267f70dbc517",
+									"host": [
+										"localhost"
+									],
+									"port": "4300",
+									"path": [
+										"api",
+										"v1",
+										"task",
+										"5d9ac53e3970267f70dbc517"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Delivery",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"delivery\":{\n        \"userID\" : \"5d9a8a510d1a37629cd70fc8\",\n\t\t\"userName\" : \"CRosas\",\n\t\t\"email\" : \"cesar@email.com\",\n\t\t\"description\" : \"Entrega 1 \",\n\t\t\"score\" : 100,\n\t\t\"type\" : \"ensayo\"\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4300/api/v1/task/5d9ad2631a090d82f8ef75c4/delivery",
+									"host": [
+										"localhost"
+									],
+									"port": "4300",
+									"path": [
+										"api",
+										"v1",
+										"task",
+										"5d9ad2631a090d82f8ef75c4",
+										"delivery"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Task Average",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4300/api/v1/tasks/ops/avg",
+									"host": [
+										"localhost"
+									],
+									"port": "4300",
+									"path": [
+										"api",
+										"v1",
+										"tasks",
+										"ops",
+										"avg"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

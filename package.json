@@ -1,0 +1,45 @@
+{
+  "name": "test_backend_pt2",
+  "version": "1.0.0",
+  "description": "API interaction using mongoose and Mongo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon --exec babel-node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "node"
+  ],
+  "author": "Cesar Augusto Rosas Sanchez",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "debug": "~2.6.9",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "file-type": "^12.3.0",
+    "form-data": "^2.3.3",
+    "jsonwebtoken": "^8.5.1",
+    "mixing": "^1.2.4",
+    "mocha": "^6.0.2",
+    "moment": "^2.24.0",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.3",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.19.1",
+    "rimraf": "^2.6.3",
+    "supertest": "^4.0.2",
+    "uuid": "^3.3.3",
+    "zlib": "^1.0.5"
+  }
+}
